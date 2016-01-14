@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+}
+
+.character-sheet {
+    background-color: #fdf6e3;
+    box-sizing: border-box;
+    color: #002b36;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 1.5em;
+    width: 100%;
+}
+
+.character-sheet > header {
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+
+.character-sheet > header .title {
+    color: #b58900;
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+
+.character-sheet > header .character.picture {
+    border-radius: 50%;
+    height: 150px;
+    overflow: hidden;
+    width: 150px;
+}
+
+.character-sheet > header > div > div {
+    margin: 10px 0;
+}
+
+.character-sheet > header .character .text {
+    margin-right: 5px;
+}
+
+.character-sheet > header .character .unknown:before {
+    content: "unknown";
+    font-style: italic;
+}
+
+.character-sheet > header .character .fa.fa-pencil {
+    color: #93a1a1;
+    font-size: 0.5em;
+}
+
+.character-sheet > header .character .fa.fa-pencil:hover {
+    color: #dc322f;
+}
+
+.character-sheet > header .character.name {
+    font-size: xx-large;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.character-sheet > header .character.name input {
+    font-size: x-large;
+    text-align: center;
+}
+
+.character-sheet > header .character.level,
+.character-sheet > header .character.race,
+.character-sheet > header .character.class {
+    color: #586e75;
+    font-size: x-large;
+    margin: 0 5px;
+}
+
+.character-sheet .character.experience {
+    font-size: larger;
+}
+.character-sheet .character.experience label {
+    margin-right: 0.5em;
+}
+.character-sheet .character.experience input{
+    font-size: large;
+    width: 4.5em;
+}
+
+.character-sheet > section {
+    margin-top: 2em;
+}
+
+.character-sheet .abilities header {
+    font-size: x-large;
+}
+
+.character-sheet .ability {
+    border: 1px dotted #93a1a1;
+    margin: 1em 0;
+    padding: 0.5em;
+    width: 10em;
+}
+
+.character-sheet .ability label {
+    display: inline-block;
+    font-style: italic;
+    margin-top: 0.5em;
+}
+
+.character-sheet .ability span {
+    font-size: larger;
+    margin-right: 10px;
+}
+
+.character-sheet .ability .base {
+    text-align: right;
+    width: 2.5em;
+}
+
+.character-sheet .ability .score {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.character-sheet .ability .modifier.bonus {
+    color: #859900;
+}
+
+.character-sheet .ability .modifier.bonus:before {
+    content: "+";
+}
+
+.character-sheet .ability .modifier.penalty {
+    color: #dc322f;
+}
+
+.character-sheet .ability .modifier.penalty:before {
+    content: "-";
+}
+
+.character-sheet > footer {
+    text-align: right;
+}
+.character-sheet > footer a {
+    color: #002b36;
+    text-decoration: none;
+}
+.character-sheet > footer a span {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 0.3em;
+}
+
+body > footer {
+    background-color: #eee8d5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+}
+
+body > footer a {
+    color: #6c71c4;
+    display: inline-block;
+    line-height: normal;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+body > footer a span {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin-left: 0.1em;
+}
