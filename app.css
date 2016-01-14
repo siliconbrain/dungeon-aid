@@ -1,0 +1,85 @@
+/*
+Solarized Light colors:
+base03    #002b36  // darkest
+base02    #073642
+base01    #586e75
+base00    #657b83
+base0     #839496
+base1     #93a1a1
+base2     #eee8d5
+base3     #fdf6e3  // lightest
+yellow    #b58900
+orange    #cb4b16
+red       #dc322f
+magenta   #d33682
+violet    #6c71c4
+blue      #268bd2
+cyan      #2aa198
+green     #859900
+*/
+
+body {
+    margin: 0;
+}
+
+.character-sheet {
+    background-color: #fdf6e3;
+    color: #002b36;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 20px 20px;
+}
+
+.character-sheet header {
+    font-size: large;
+}
+
+.character-sheet > header {
+    font-size: x-large;
+    margin: 10px 0px 20px 0px;
+    text-align: center;
+}
+
+.character-sheet > header .title {
+    color: #b58900;
+    margin-bottom: 20px;
+}
+
+.character-sheet > header .character.name {
+    display: block;
+    font-size: xx-large;
+    margin: 10px 0px;
+}
+
+.character-sheet > header .character.level,
+.character-sheet > header .character.race,
+.character-sheet > header .character.class{
+    color: #586e75;
+    margin: 0px 5px;
+}
+
+.character-sheet > section .character.name,
+.character-sheet > section .character.level {
+    margin: 5px;
+}
+
+.character-sheet .abilities {
+    margin: 20px;
+}
+
+.character-sheet .ability {
+    margin: 5px;
+}
+
+.character-sheet .ability label {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.character-sheet .ability .base {
+    text-align: right;
+    width: 30px;
+}
+
+.character-sheet .ability .effective {
+    font-weight: bold;
+}

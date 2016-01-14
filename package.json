@@ -1,0 +1,24 @@
+{
+  "name": "dungeon-aid",
+  "description": "Dungeon Aid -- A D&D player's best friend.",
+  "author": "Dudás Ádám <sir.dudas.adam@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@cycle/core": "^6.0.0",
+    "@cycle/dom": "^9.0.1",
+    "@cycle/isolate": "^1.2.0",
+    "@cycle/storage": "^2.0.3",
+    "rx": "^4.0.7"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.1",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "version": "0.0.1"
+}
