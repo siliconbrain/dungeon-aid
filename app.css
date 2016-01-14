@@ -44,6 +44,13 @@ body {
     margin-bottom: 20px;
 }
 
+.character-sheet > header .character.picture {
+    border-radius: 50%;
+    height: 150px;
+    overflow: hidden;
+    width: 150px;
+}
+
 .character-sheet > header .character.name {
     display: block;
     font-size: xx-large;

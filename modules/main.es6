@@ -1,43 +1,71 @@
 import Rx from "rx";
 import Cycle from "@cycle/core";
-import {article, div, header, input, label, makeDOMDriver, section, span} from "@cycle/dom";
+import {article, div, header, img, input, label, makeDOMDriver, section, span} from "@cycle/dom";
 import isolate from "@cycle/isolate";
 import storageDriver from "@cycle/storage";
 
 import {makeCharacter} from "./character.es6";
 
 function loadState(storage) {
+    const defaultState = {
+        character: {
+            name: "",
+            level: 1,
+            class_: null,
+            race: null,
+            abilities: {
+                strength: {
+                    base: null
+                },
+                dexterity: {
+                    base: null
+                },
+                constitution: {
+                    base: null
+                },
+                intelligence: {
+                    base: null
+                },
+                wisdom: {
+                    base: null
+                },
+                charisma: {
+                    base: null
+                }
+            }
+        }
+    };
     return storage.local
         .getItem("character")
         .map(JSON.parse)
-        .map(data => data && ({
+        .map(data => data === null ? defaultState : {
             character: {
-                name: data.name || "",
-                level: data.level || 1,
-                class_: data.class_ || null,
-                race: data.race || null,
+                name: data.name || defaultState.character.name,
+                level: data.level || defaultState.character.level,
+                class_: data.class_ || defaultState.character.class_,
+                race: data.race || defaultState.character.race,
                 abilities: {
                     strength: {
-                        base: data.strengthBase || null
+                        base: data.strengthBase || defaultState.character.abilities.strength.base
                     },
                     dexterity: {
-                        base: data.dexterityBase || null
+                        base: data.dexterityBase || defaultState.character.abilities.dexterity.base
                     },
                     constitution: {
-                        base: data.constitutionBase || null
+                        base: data.constitutionBase || defaultState.character.abilities.constitution.base
                     },
                     intelligence: {
-                        base: data.intelligenceBase || null
+                        base: data.intelligenceBase || defaultState.character.abilities.intelligence.base
                     },
                     wisdom: {
-                        base: data.wisdomBase || null
+                        base: data.wisdomBase || defaultState.character.abilities.wisdom.base
                     },
                     charisma: {
-                        base: data.charismaBase || null
+                        base: data.charismaBase || defaultState.character.abilities.charisma.base
                     }
                 }
             }
-        }));
+        });
 }
 
 function toCharacter(state) {
@@ -74,8 +102,8 @@ function present(state$) {
     return state$.map(state =>
         article(".character-sheet", [
             header([
-                // TODO: profile picture
                 div(".title", "Character Sheet"),
+                img(".character.picture", {src: "http://www.gravatar.com/avatar/c666018cb380c0b6680f7cdfdb00539a?size=150"}),  // TODO: let user customize image
                 div([
                     span(".character.name", state.name),
                     span(".character.level", "Level " + state.level),
