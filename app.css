@@ -1,46 +1,24 @@
-/*
-Solarized Light colors:
-base03    #002b36  // darkest
-base02    #073642
-base01    #586e75
-base00    #657b83
-base0     #839496
-base1     #93a1a1
-base2     #eee8d5
-base3     #fdf6e3  // lightest
-yellow    #b58900
-orange    #cb4b16
-red       #dc322f
-magenta   #d33682
-violet    #6c71c4
-blue      #268bd2
-cyan      #2aa198
-green     #859900
-*/
-
 body {
     margin: 0;
 }
 
 .character-sheet {
     background-color: #fdf6e3;
+    box-sizing: border-box;
     color: #002b36;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 20px 20px;
-}
-
-.character-sheet header {
-    font-size: large;
+    padding: 1.5em;
+    width: 100%;
 }
 
 .character-sheet > header {
-    font-size: x-large;
-    margin: 10px 0px 20px 0px;
+    margin: 10px 0 20px 0;
     text-align: center;
 }
 
 .character-sheet > header .title {
     color: #b58900;
+    font-size: x-large;
     margin-bottom: 20px;
 }
 
@@ -51,42 +29,144 @@ body {
     width: 150px;
 }
 
+.character-sheet > header > div > div {
+    margin: 10px 0;
+}
+
+.character-sheet > header .character .text {
+    margin-right: 5px;
+}
+
+.character-sheet > header .character .unknown:before {
+    content: "unknown";
+    font-style: italic;
+}
+
+.character-sheet > header .character .fa.fa-pencil {
+    color: #93a1a1;
+    font-size: 0.5em;
+}
+
+.character-sheet > header .character .fa.fa-pencil:hover {
+    color: #dc322f;
+}
+
 .character-sheet > header .character.name {
-    display: block;
     font-size: xx-large;
-    margin: 10px 0px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.character-sheet > header .character.name input {
+    font-size: x-large;
+    text-align: center;
 }
 
 .character-sheet > header .character.level,
 .character-sheet > header .character.race,
-.character-sheet > header .character.class{
+.character-sheet > header .character.class {
     color: #586e75;
-    margin: 0px 5px;
+    font-size: x-large;
+    margin: 0 5px;
 }
 
-.character-sheet > section .character.name,
-.character-sheet > section .character.level {
-    margin: 5px;
+.character-sheet .character.experience {
+    font-size: larger;
+}
+.character-sheet .character.experience label {
+    margin-right: 0.5em;
+}
+.character-sheet .character.experience input{
+    font-size: large;
+    width: 4.5em;
 }
 
-.character-sheet .abilities {
-    margin: 20px;
+.character-sheet > section {
+    margin-top: 2em;
+}
+
+.character-sheet .abilities header {
+    font-size: x-large;
 }
 
 .character-sheet .ability {
-    margin: 5px;
+    border: 1px dotted #93a1a1;
+    margin: 1em 0;
+    padding: 0.5em;
+    width: 10em;
 }
 
 .character-sheet .ability label {
-    margin-left: 5px;
+    display: inline-block;
+    font-style: italic;
+    margin-top: 0.5em;
+}
+
+.character-sheet .ability span {
+    font-size: larger;
     margin-right: 10px;
 }
 
 .character-sheet .ability .base {
     text-align: right;
-    width: 30px;
+    width: 2.5em;
 }
 
-.character-sheet .ability .effective {
+.character-sheet .ability .score {
+    font-size: x-large;
     font-weight: bold;
+}
+
+.character-sheet .ability .modifier {
+    color: #93a1a1;
+}
+
+.character-sheet .ability .modifier.bonus {
+    color: #859900;
+}
+
+.character-sheet .ability .modifier.bonus:before {
+    content: "+";
+}
+
+.character-sheet .ability .modifier.penalty {
+    color: #dc322f;
+}
+
+.character-sheet .ability .modifier.penalty:before {
+    content: "-";
+}
+
+.character-sheet > footer {
+    text-align: right;
+}
+.character-sheet > footer a {
+    color: #002b36;
+    text-decoration: none;
+}
+.character-sheet > footer a span {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: 0.3em;
+}
+
+body > footer {
+    background-color: #eee8d5;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+}
+
+body > footer a {
+    color: #6c71c4;
+    display: inline-block;
+    line-height: normal;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+body > footer a span {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin-left: 0.1em;
 }
