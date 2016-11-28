@@ -395,7 +395,7 @@ function presentCharacterClass(character) {
 
 function present(state$) {
     return state$.map(function (state) {
-        return (0, _dom.article)(".character-sheet", [(0, _dom.header)([(0, _dom.div)(".title", "Character Sheet"), (0, _dom.img)(".character.picture", { src: "http://www.gravatar.com/avatar/c666018cb380c0b6680f7cdfdb00539a?size=150" }), // TODO: let user customize image
+        return (0, _dom.article)(".character-sheet", [(0, _dom.header)([(0, _dom.div)(".title", "Character Sheet"), (0, _dom.img)(".character.picture", { src: "https://www.gravatar.com/avatar/c666018cb380c0b6680f7cdfdb00539a?size=150" }), // TODO: let user customize image
         (0, _dom.div)([(0, _dom.div)(presentCharacterName(state.character, state.editingName)), (0, _dom.div)([(0, _dom.span)(".character.level", "Level " + state.character.level), presentCharacterRace(state.character, state.editingRace), presentCharacterClass(state.character, state.editingClass)])])]), (0, _dom.section)([(0, _dom.div)(".character.experience", [(0, _dom.label)("XP"), (0, _dom.input)({ type: "number", min: "0", value: String(state.character.experience) })])]), (0, _dom.section)(".abilities", [(0, _dom.header)("Abilities"), presentAbility(state.character.abilities.strength, "Strength"), presentAbility(state.character.abilities.dexterity, "Dexterity"), presentAbility(state.character.abilities.constitution, "Constitution"), presentAbility(state.character.abilities.intelligence, "Intelligence"), presentAbility(state.character.abilities.wisdom, "Wisdom"), presentAbility(state.character.abilities.charisma, "Charisma")]), (0, _dom.footer)([(0, _dom.a)(".export.fa.fa-save", { href: "#" }, (0, _dom.span)("Export"))])]);
     });
 }
